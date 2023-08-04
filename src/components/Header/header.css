@@ -1,0 +1,34 @@
+header #basic-nav-dropdown {
+  color: white !important;
+}
+
+header .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+header .dropdown-menu {
+  background-color: var(--bs-primary);
+  border: none;
+  border-radius: 0;
+}
+
+header .dropdown-menu a {
+  color: rgb(221, 221, 221) !important;
+  background: var(--bs-primary) !important;
+  font-weight: 500;
+}
+
+header .dropdown-menu a:hover {
+  color: #fff !important;
+}
+
+header .border-top {
+  border-color: #0769da !important;
+}
+
+@media screen and (max-width: 768px) {
+  header .buttons {
+    flex-direction: column;
+  }
+}
