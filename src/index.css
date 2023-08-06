@@ -10,3 +10,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.form-range::-webkit-slider-runnable-track {
+  background: #c9c9c9;
+}
