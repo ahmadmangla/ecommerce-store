@@ -1,0 +1,14 @@
+.customSlider .carousel-indicators {
+  display: none;
+}
+
+.customSlider .carousel-inner .carousel-item img {
+  height: 400px;
+  object-fit: contain;
+  /* padding: 2rem; */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(1);
+}

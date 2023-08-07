@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Nav, Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const [priceRange, setPriceRange] = useState(0);
@@ -24,29 +25,25 @@ const SideBar = () => {
       <div className="categories">
         <h3 className="fs-5 fw-bold">Categories</h3>
         <Nav className="flex-column my-5">
-          <Nav.Item>
-            <Nav.Link href="#">Air conditioner</Nav.Link>
+          <Nav.Item className="mb-3 px-2">
+            <Link to="/product-categories/smartphones">Smart Phones </Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Audio & video</Nav.Link>
+          <Nav.Item className="mb-3 px-2">
+            <Link to="/product-categories/laptops">Laptops</Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Gadgets</Nav.Link>
+          <Nav.Item className="mb-3 px-2">
+            <Link to="/product-categories/fragrances">Fragrances</Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Home appliances</Nav.Link>
+          <Nav.Item className="mb-3 px-2">
+            <Link to="/product-categories/skincare">Beauty & Skincare</Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Kitchen appliances</Nav.Link>
+          <Nav.Item className="mb-3 px-2">
+            <Link to="/product-categories/groceries">Groceries</Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">PCs & laptop</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Refrigerator</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Smart home</Nav.Link>
+          <Nav.Item className="mb-3 px-2">
+            <Link to="/product-categories/home-decoration">
+              Home Decoration
+            </Link>
           </Nav.Item>
         </Nav>
       </div>

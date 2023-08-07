@@ -36,40 +36,45 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="justify-content-between flex-grow-1">
-                <NavDropdown
-                  title={
-                    <Link className="text-white" to="/products">
-                      All Products
-                    </Link>
-                  }
-                  id="basic-nav-dropdown"
+                <Link className="text-white p-2" to="/products">
+                  All Products
+                </Link>
+                <Link
+                  className="text-white p-2"
+                  to="/product-categories/smartphones"
                 >
-                  <NavDropdown.Item href="#action/3.2">
-                    Air Conditioner
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Kitchen Appliances
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.4">
-                    PC and Laptops
-                  </NavDropdown.Item>
-                </NavDropdown>
-
-                <Nav.Link className="text-white" href="#home">
-                  Home Appliances
-                </Nav.Link>
-                <Nav.Link className="text-white" href="#link">
-                  Audio & Video
-                </Nav.Link>
-                <Nav.Link className="text-white" href="#link">
-                  Refrigerator
-                </Nav.Link>
-                <Nav.Link className="text-white" href="#link">
-                  New Arrivals
-                </Nav.Link>
-                <Nav.Link className="text-white" href="#link">
-                  Todays deal
-                </Nav.Link>
+                  Smart Phones{" "}
+                </Link>
+                <Link
+                  className="text-white p-2"
+                  to="/product-categories/laptops"
+                >
+                  Laptops
+                </Link>
+                <Link
+                  className="text-white p-2"
+                  to="/product-categories/fragrances"
+                >
+                  Fragrances
+                </Link>
+                <Link
+                  className="text-white p-2"
+                  to="/product-categories/skincare"
+                >
+                  Beauty & Skincare
+                </Link>
+                <Link
+                  className="text-white p-2"
+                  to="/product-categories/groceries"
+                >
+                  Groceries
+                </Link>
+                <Link
+                  className="text-white p-2"
+                  to="/product-categories/home-decoration"
+                >
+                  Home Decoration
+                </Link>
                 <div className="buttons d-flex gap-3">
                   <Button className="position-relative">
                     <FontAwesomeIcon icon={faCartShopping} />

@@ -10,6 +10,7 @@ export const products = [
     stock: 94,
     brand: "Apple",
     category: "smartphones",
+    categoryName: "Smart Phones",
     thumbnail: "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/1/1.jpg",
@@ -31,6 +32,7 @@ export const products = [
     stock: 34,
     brand: "Apple",
     category: "smartphones",
+    categoryName: "Smart Phones",
     thumbnail: "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/2/1.jpg",
@@ -51,6 +53,7 @@ export const products = [
     stock: 36,
     brand: "Samsung",
     category: "smartphones",
+    categoryName: "Smart Phones",
     thumbnail: "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
     images: ["https://i.dummyjson.com/data/products/3/1.jpg"],
   },
@@ -65,6 +68,7 @@ export const products = [
     stock: 123,
     brand: "OPPO",
     category: "smartphones",
+    categoryName: "Smart Phones",
     thumbnail: "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/4/1.jpg",
@@ -86,6 +90,7 @@ export const products = [
     stock: 32,
     brand: "Huawei",
     category: "smartphones",
+    categoryName: "Smart Phones",
     thumbnail: "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/5/1.jpg",
@@ -105,6 +110,7 @@ export const products = [
     stock: 83,
     brand: "Apple",
     category: "laptops",
+    categoryName: "Laptops",
     thumbnail: "https://i.dummyjson.com/data/products/6/thumbnail.png",
     images: [
       "https://i.dummyjson.com/data/products/6/1.png",
@@ -125,6 +131,7 @@ export const products = [
     stock: 50,
     brand: "Samsung",
     category: "laptops",
+    categoryName: "Laptops",
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/7/1.jpg",
@@ -145,6 +152,7 @@ export const products = [
     stock: 68,
     brand: "Microsoft Surface",
     category: "laptops",
+    categoryName: "Laptops",
     thumbnail: "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/8/1.jpg",
@@ -166,6 +174,7 @@ export const products = [
     stock: 96,
     brand: "Infinix",
     category: "laptops",
+    categoryName: "Laptops",
     thumbnail: "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/9/1.jpg",
@@ -187,6 +196,7 @@ export const products = [
     stock: 89,
     brand: "HP Pavilion",
     category: "laptops",
+    categoryName: "Laptops",
     thumbnail: "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
     images: [
       "https://i.dummyjson.com/data/products/10/1.jpg",
@@ -207,6 +217,7 @@ export const products = [
     stock: 65,
     brand: "Impression of Acqua Di Gio",
     category: "fragrances",
+    categoryName: "Fragrances",
     thumbnail: "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/11/1.jpg",
@@ -226,6 +237,7 @@ export const products = [
     stock: 52,
     brand: "Royal_Mirage",
     category: "fragrances",
+    categoryName: "Fragrances",
     thumbnail: "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/12/1.jpg",
@@ -247,6 +259,7 @@ export const products = [
     stock: 61,
     brand: "Fog Scent Xpressio",
     category: "fragrances",
+    categoryName: "Fragrances",
     thumbnail: "https://i.dummyjson.com/data/products/13/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/13/1.jpg",
@@ -268,6 +281,7 @@ export const products = [
     stock: 114,
     brand: "Al Munakh",
     category: "fragrances",
+    categoryName: "Fragrances",
     thumbnail: "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/14/1.jpg",
@@ -288,6 +302,7 @@ export const products = [
     stock: 105,
     brand: "Lord - Al-Rehab",
     category: "fragrances",
+    categoryName: "Fragrances",
     thumbnail: "https://i.dummyjson.com/data/products/15/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/15/1.jpg",
@@ -309,6 +324,7 @@ export const products = [
     stock: 110,
     brand: "L'Oreal Paris",
     category: "skincare",
+    categoryName: "Beauty & Skincare",
     thumbnail: "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/16/1.png",
@@ -330,6 +346,7 @@ export const products = [
     stock: 78,
     brand: "Hemani Tea",
     category: "skincare",
+    categoryName: "Beauty & Skincare",
     thumbnail: "https://i.dummyjson.com/data/products/17/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/17/1.jpg",
@@ -350,6 +367,7 @@ export const products = [
     stock: 88,
     brand: "Dermive",
     category: "skincare",
+    categoryName: "Beauty & Skincare",
     thumbnail: "https://i.dummyjson.com/data/products/18/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/18/1.jpg",
@@ -371,6 +389,7 @@ export const products = [
     stock: 54,
     brand: "ROREC White Rice",
     category: "skincare",
+    categoryName: "Beauty & Skincare",
     thumbnail: "https://i.dummyjson.com/data/products/19/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/19/1.jpg",
@@ -391,6 +410,7 @@ export const products = [
     stock: 140,
     brand: "Fair & Clear",
     category: "skincare",
+    categoryName: "Beauty & Skincare",
     thumbnail: "https://i.dummyjson.com/data/products/20/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/20/1.jpg",
@@ -411,6 +431,7 @@ export const products = [
     stock: 133,
     brand: "Saaf & Khaas",
     category: "groceries",
+    categoryName: "Groceries",
     thumbnail: "https://i.dummyjson.com/data/products/21/thumbnail.png",
     images: [
       "https://i.dummyjson.com/data/products/21/1.png",
@@ -429,6 +450,7 @@ export const products = [
     stock: 146,
     brand: "Bake Parlor Big",
     category: "groceries",
+    categoryName: "Groceries",
     thumbnail: "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/22/1.jpg",
@@ -448,6 +470,7 @@ export const products = [
     stock: 26,
     brand: "Baking Food Items",
     category: "groceries",
+    categoryName: "Groceries",
     thumbnail: "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/23/1.jpg",
@@ -469,6 +492,7 @@ export const products = [
     stock: 113,
     brand: "fauji",
     category: "groceries",
+    categoryName: "Groceries",
     thumbnail: "https://i.dummyjson.com/data/products/24/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/24/1.jpg",
@@ -489,6 +513,7 @@ export const products = [
     stock: 47,
     brand: "Dry Rose",
     category: "groceries",
+    categoryName: "Groceries",
     thumbnail: "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/25/1.png",
@@ -510,6 +535,7 @@ export const products = [
     stock: 131,
     brand: "Boho Decor",
     category: "home-decoration",
+    categoryName: "Home Decoration",
     thumbnail: "https://i.dummyjson.com/data/products/26/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/26/1.jpg",
@@ -532,6 +558,7 @@ export const products = [
     stock: 17,
     brand: "Flying Wooden",
     category: "home-decoration",
+    categoryName: "Home Decoration",
     thumbnail: "https://i.dummyjson.com/data/products/27/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/27/1.jpg",
@@ -553,6 +580,7 @@ export const products = [
     stock: 54,
     brand: "LED Lights",
     category: "home-decoration",
+    categoryName: "Home Decoration",
     thumbnail: "https://i.dummyjson.com/data/products/28/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/28/1.jpg",
@@ -574,6 +602,7 @@ export const products = [
     stock: 7,
     brand: "luxury palace",
     category: "home-decoration",
+    categoryName: "Home Decoration",
     thumbnail: "https://i.dummyjson.com/data/products/29/thumbnail.webp",
     images: [
       "https://i.dummyjson.com/data/products/29/1.jpg",
@@ -595,6 +624,7 @@ export const products = [
     stock: 54,
     brand: "Golden",
     category: "home-decoration",
+    categoryName: "Home Decoration",
     thumbnail: "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
     images: [
       "https://i.dummyjson.com/data/products/30/1.jpg",
