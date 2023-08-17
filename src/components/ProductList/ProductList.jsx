@@ -23,9 +23,7 @@ const ProductList = (props) => {
         {allProducts.map((item) => {
           return (
             <Col key={item.id} md={6} lg={4}>
-              <Link to={`${item.slug}`}>
-                <ProductCard {...item} />
-              </Link>
+              <ProductCard {...item} />
             </Col>
           );
         })}

@@ -11,6 +11,7 @@ import "./header.css";
 import { useState } from "react";
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
+import { Toaster } from "react-hot-toast";
 
 const Header = () => {
   const [toggleCart, setToggleCart] = useState(false);
@@ -80,11 +81,11 @@ const Header = () => {
                   Home Decoration
                 </Link>
                 <div className="buttons d-flex gap-3">
-                  <Button className="position-relative">
-                    <FontAwesomeIcon
-                      icon={faCartShopping}
-                      onClick={() => setToggleCart(!toggleCart)}
-                    />
+                  <Button
+                    className="position-relative"
+                    onClick={() => setToggleCart(!toggleCart)}
+                  >
+                    <FontAwesomeIcon icon={faCartShopping} />
                     <Badge pill bg="dark" className="position-absolute">
                       {products.length}
                     </Badge>
@@ -99,9 +100,9 @@ const Header = () => {
           </Container>
         </Navbar>
       </header>
-      {toggleCart && (
-        <Cart setToggleCart={setToggleCart} toggleCart={toggleCart} />
-      )}
+
+      <Cart setToggleCart={setToggleCart} toggleCart={toggleCart} />
+      <Toaster />
     </>
   );
 };

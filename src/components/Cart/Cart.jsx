@@ -4,6 +4,9 @@ import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem } from "../../context/cartSlice";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
+import "./cart.css";
 
 const Cart = ({ setToggleCart, toggleCart }) => {
   const { products } = useSelector((state) => state.cart);
@@ -17,9 +20,14 @@ const Cart = ({ setToggleCart, toggleCart }) => {
 
     return total;
   };
+
   return (
-    <div className="cart">
-      <aside className="vh-100 w-25 sm-w-100 d-block bg-white border-left position-fixed z-2 right-0 h-100vh p-3 end-0 top-0 overflow-y-auto">
+    <div
+      className={`${
+        toggleCart ? `cart position-relative active` : `cart position-relative`
+      }`}
+    >
+      <aside className="vh-100 w-25 d-block bg-white border-left position-fixed z-2 right-0 h-100vh p-3 end-0 top-0 overflow-y-auto">
         <div className="title d-flex justify-content-between align-items-center">
           <h2 className="mb-0 text-primary">Cart</h2>
           <FontAwesomeIcon
@@ -36,7 +44,13 @@ const Cart = ({ setToggleCart, toggleCart }) => {
             return (
               <div className="d-flex gap-3 mb-4 align-items-center position-relative right-10">
                 <div className="image">
-                  <img src={item.thumbnail} width={120} alt="" />
+                  <img
+                    className="object-fit-contain"
+                    src={item.thumbnail}
+                    width={120}
+                    height={120}
+                    alt=""
+                  />
                 </div>
                 <div className="product-detail ">
                   <div className="title pe-4">
@@ -67,7 +81,7 @@ const Cart = ({ setToggleCart, toggleCart }) => {
           </div>
         )}
 
-        <div className="bottom">
+        <div className="bottom ">
           <div className="subtotal d-flex justify-content-between border-top border-bottom py-3">
             <p className="mb-0">
               <span className="fw-bold">Subtotal: </span>

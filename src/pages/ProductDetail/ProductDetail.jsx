@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { toast } from "react-hot-toast";
+
 import { useDispatch } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import SelectQuantity from "../../components/SelectQuantity/SelectQuantity";
@@ -23,6 +25,27 @@ const ProductDetail = () => {
     thumbnail,
   } = SingleProduct;
 
+  const handleClick = ({
+    id,
+    title,
+    description,
+    thumbnail,
+    quantity,
+    price,
+  }) => {
+    dispatch(
+      addToCart({
+        id,
+        title,
+        description,
+        thumbnail,
+        quantity,
+        price,
+      })
+    );
+    toast.success(`${title} added to the cart`);
+  };
+
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -45,16 +68,14 @@ const ProductDetail = () => {
                 <Button
                   variant="primary rounded-0 inline-block fw-bold px-4"
                   onClick={() =>
-                    dispatch(
-                      addToCart({
-                        id,
-                        title,
-                        description,
-                        thumbnail,
-                        quantity: counter,
-                        price,
-                      })
-                    )
+                    handleClick({
+                      id,
+                      title,
+                      description,
+                      thumbnail,
+                      quantity: counter,
+                      price,
+                    })
                   }
                 >
                   Add to Cart
