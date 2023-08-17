@@ -229,7 +229,7 @@ export const products = [
   {
     id: 12,
     title: "Brown Perfume",
-    slug: "perfume-Oil",
+    slug: "Brown-Perfume",
     description: "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
     price: 40,
     discountPercentage: 15.66,
@@ -250,7 +250,7 @@ export const products = [
   {
     id: 13,
     title: "Fog Scent Xpressio Perfume",
-    slug: "perfume-Oil",
+    slug: "Fog-Scent-Xpressio-Perfume",
     description:
       "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
     price: 13,
@@ -272,7 +272,7 @@ export const products = [
   {
     id: 14,
     title: "Non-Alcoholic Concentrated Perfume Oil",
-    slug: "perfume-Oil",
+    slug: "Non-Alcoholic-Concentrated-Perfume-Oil",
     description:
       "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
     price: 120,
@@ -293,7 +293,7 @@ export const products = [
   {
     id: 15,
     title: "Eau De Perfume Spray",
-    slug: "perfume-Oil",
+    slug: "Eau-De-Perfume-Spray",
     description:
       "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
     price: 30,
@@ -315,7 +315,7 @@ export const products = [
   {
     id: 16,
     title: "Hyaluronic Acid Serum",
-    slug: "perfume-Oil",
+    slug: "Hyaluronic-Acid-Serum",
     description:
       "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
     price: 19,
@@ -337,7 +337,7 @@ export const products = [
   {
     id: 17,
     title: "Tree Oil 30ml",
-    slug: "perfume-Oil",
+    slug: "Tree-Oil-30ml",
     description:
       "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
     price: 12,
@@ -358,7 +358,7 @@ export const products = [
   {
     id: 18,
     title: "Oil Free Moisturizer 100ml",
-    slug: "perfume-Oil",
+    slug: "Oil-Free-Moisturizer-100ml",
     description:
       "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
     price: 40,
@@ -379,8 +379,8 @@ export const products = [
   },
   {
     id: 19,
-    title: "Skin Beauty Serum.",
-    slug: "perfume-Oil",
+    title: "Skin Beauty Serum",
+    slug: "Skin-Beauty-Serum",
     description:
       "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
     price: 46,
@@ -401,7 +401,7 @@ export const products = [
   {
     id: 20,
     title: "Freckle Treatment Cream- 15gm",
-    slug: "perfume-Oil",
+    slug: "Freckle-Treatment-Cream",
     description:
       "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
     price: 70,
@@ -422,8 +422,8 @@ export const products = [
   },
   {
     id: 21,
-    title: "- Daal Masoor 500 grams",
-    slug: "perfume-Oil",
+    title: "Daal Masoor 500 grams",
+    slug: "Daal-Masoor-500-grams",
     description: "Fine quality Branded Product Keep in a cool and dry place",
     price: 20,
     discountPercentage: 4.81,
@@ -442,7 +442,7 @@ export const products = [
   {
     id: 22,
     title: "Elbow Macaroni - 400 gm",
-    slug: "perfume-Oil",
+    slug: "Elbow-Macaroni",
     description: "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
     price: 14,
     discountPercentage: 15.58,
@@ -460,8 +460,8 @@ export const products = [
   },
   {
     id: 23,
-    title: "Orange Essence Food Flavou",
-    slug: "perfume-Oil",
+    title: "Orange Essence Food Flavour",
+    slug: "Orange-Essence-Food-Flavour",
     description:
       "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
     price: 14,
@@ -483,7 +483,7 @@ export const products = [
   {
     id: 24,
     title: "cereals muesli fruit nuts",
-    slug: "perfume-Oil",
+    slug: "cereals-muesli-fruit-nuts",
     description:
       "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
     price: 46,
@@ -505,7 +505,7 @@ export const products = [
   {
     id: 25,
     title: "Gulab Powder 50 Gram",
-    slug: "perfume-Oil",
+    slug: "Gulab-Powder-50-Gram",
     description: "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
     price: 70,
     discountPercentage: 13.58,
@@ -526,7 +526,7 @@ export const products = [
   {
     id: 26,
     title: "Plant Hanger For Home",
-    slug: "perfume-Oil",
+    slug: "Plant-Hanger-For-Home",
     description:
       "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
     price: 41,
@@ -549,7 +549,7 @@ export const products = [
   {
     id: 27,
     title: "Flying Wooden Bird",
-    slug: "perfume-Oil",
+    slug: "Flying-Wooden-Bird",
     description:
       "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
     price: 51,
@@ -571,7 +571,7 @@ export const products = [
   {
     id: 28,
     title: "3D Embellishment Art Lamp",
-    slug: "perfume-Oil",
+    slug: "3D-Embellishment-Art-Lamp",
     description:
       "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
     price: 20,
@@ -593,7 +593,7 @@ export const products = [
   {
     id: 29,
     title: "Handcraft Chinese style",
-    slug: "perfume-Oil",
+    slug: "Handcraft-Chinese-style",
     description:
       "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
     price: 60,
@@ -615,7 +615,7 @@ export const products = [
   {
     id: 30,
     title: "Key Holder",
-    slug: "perfume-Oil",
+    slug: "Key-Holder",
     description:
       "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
     price: 30,

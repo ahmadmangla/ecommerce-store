@@ -1,7 +1,12 @@
+import { Container } from "react-bootstrap";
 import ProductList from "../../components/ProductList/ProductList";
 
 const Products = () => {
-  return <ProductList title="Products" />;
+  return (
+    <Container>
+      <ProductList title="Products" />
+    </Container>
+  );
 };
 
 export default Products;

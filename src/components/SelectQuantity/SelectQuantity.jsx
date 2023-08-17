@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../context/cartSlice";
 
-const SelectQuantity = () => {
-  const [counter, setCounter] = useState(1);
+const SelectQuantity = (props) => {
+  const { counter, setCounter } = props;
 
   //increase counter
   const increase = () => {

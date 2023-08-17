@@ -4,6 +4,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import { products } from "../../utils/dummydata.js";
 import { useEffect, useState } from "react";
 import PageTitle from "../PageTitle/PageTitle";
+import ProductSorting from "../ProductSorting/ProductSorting";
 
 const ProductList = (props) => {
   const [allProducts, setProducts] = useState(products);
@@ -17,6 +18,7 @@ const ProductList = (props) => {
   return (
     <Container className="py-5">
       <PageTitle title={props.title} />
+      <ProductSorting allProducts={allProducts} setProducts={setProducts} />
       <Row className="my-4 justify-content-center">
         {allProducts.map((item) => {
           return (

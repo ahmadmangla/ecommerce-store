@@ -6,12 +6,16 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Badge from "react-bootstrap/Badge";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Logo from "../../assets/logo.svg";
-
 import "./header.css";
+import { useState } from "react";
+import Cart from "../Cart/Cart";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const [toggleCart, setToggleCart] = useState(false);
+  const { products } = useSelector((state) => state.cart);
+
   return (
     <>
       <header>
@@ -77,9 +81,12 @@ const Header = () => {
                 </Link>
                 <div className="buttons d-flex gap-3">
                   <Button className="position-relative">
-                    <FontAwesomeIcon icon={faCartShopping} />
+                    <FontAwesomeIcon
+                      icon={faCartShopping}
+                      onClick={() => setToggleCart(!toggleCart)}
+                    />
                     <Badge pill bg="dark" className="position-absolute">
-                      0
+                      {products.length}
                     </Badge>
                   </Button>
                   <div class="vr"></div>
@@ -92,6 +99,9 @@ const Header = () => {
           </Container>
         </Navbar>
       </header>
+      {toggleCart && (
+        <Cart setToggleCart={setToggleCart} toggleCart={toggleCart} />
+      )}
     </>
   );
 };

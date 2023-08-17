@@ -1,15 +1,32 @@
+import { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import SelectQuantity from "../../components/SelectQuantity/SelectQuantity";
 import Slider from "../../components/Slider/Slider";
+import { addToCart } from "../../context/cartSlice";
 import { products } from "../../utils/dummydata";
 
 const ProductDetail = () => {
+  const dispatch = useDispatch();
   const { slug } = useParams();
+  const [counter, setCounter] = useState(1);
   const SingleProduct = products.find((prod) => prod.slug === slug);
+  const {
+    id,
+    title,
+    description,
+    price,
+    images,
+    categoryName,
+    category,
+    thumbnail,
+  } = SingleProduct;
 
-  const { title, description, price, images, categoryName, category } =
-    SingleProduct;
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <>
       <Container className="py-5">
@@ -24,8 +41,22 @@ const ProductDetail = () => {
               <p className="fw-bold fs-3"> ${price}.00</p>
               <p>{description}.</p>
               <div className="add-to-cart d-flex gap-4">
-                <SelectQuantity />
-                <Button variant="primary rounded-0 inline-block fw-bold px-4">
+                <SelectQuantity counter={counter} setCounter={setCounter} />
+                <Button
+                  variant="primary rounded-0 inline-block fw-bold px-4"
+                  onClick={() =>
+                    dispatch(
+                      addToCart({
+                        id,
+                        title,
+                        description,
+                        thumbnail,
+                        quantity: counter,
+                        price,
+                      })
+                    )
+                  }
+                >
                   Add to Cart
                 </Button>
               </div>
