@@ -1,5 +1,8 @@
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
+
+import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
+
 import "./Slider.css";
 
 function Slider(props) {
@@ -19,6 +22,7 @@ function Slider(props) {
         {images.map((item) => {
           return (
             <Image
+              key={item}
               height={70}
               width={70}
               className="object-fit-cover"

@@ -27,8 +27,18 @@ header .border-top {
   border-color: #0769da !important;
 }
 
-@media screen and (max-width: 768px) {
-  header .buttons {
-    flex-direction: column;
+.buttons-mobile {
+  justify-content: flex-end;
+  display: none !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .buttons-mobile {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  header nav .buttons {
+    display: none !important;
   }
 }

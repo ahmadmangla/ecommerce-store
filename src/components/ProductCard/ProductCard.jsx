@@ -18,6 +18,7 @@ const ProductCard = ({ id, title, description, thumbnail, price, slug }) => {
     thumbnail,
     quantity,
     price,
+    slug,
   }) => {
     dispatch(
       addToCart({
@@ -27,6 +28,7 @@ const ProductCard = ({ id, title, description, thumbnail, price, slug }) => {
         thumbnail,
         quantity: 1,
         price,
+        slug,
       })
     );
     toast.success(`${title} added to the cart`);
@@ -64,6 +66,7 @@ const ProductCard = ({ id, title, description, thumbnail, price, slug }) => {
               thumbnail,
               quantity: 1,
               price,
+              slug,
             })
           }
         >

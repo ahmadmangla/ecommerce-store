@@ -32,6 +32,7 @@ const ProductDetail = () => {
     thumbnail,
     quantity,
     price,
+    slug,
   }) => {
     dispatch(
       addToCart({
@@ -41,6 +42,7 @@ const ProductDetail = () => {
         thumbnail,
         quantity,
         price,
+        slug,
       })
     );
     toast.success(`${title} added to the cart`);
@@ -75,6 +77,7 @@ const ProductDetail = () => {
                       thumbnail,
                       quantity: counter,
                       price,
+                      slug,
                     })
                   }
                 >
@@ -84,7 +87,7 @@ const ProductDetail = () => {
             </div>
             <div className="category-info">
               <p className="py-3">
-                Category:
+                Category:{" "}
                 <span>
                   <Link to={`/product-categories/${category}`}>
                     {categoryName}

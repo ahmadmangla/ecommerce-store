@@ -16,3 +16,9 @@
   opacity: 50% !important;
   visibility: visible;
 }
+
+@media screen and (max-width: 570px) {
+  .cart aside {
+    width: 100% !important;
+  }
+}

@@ -22,13 +22,29 @@ const Header = () => {
       <header>
         <Container className="bg-primary" fluid>
           <Container>
-            <Row className="justify-content-center py-4">
-              <Col md={6}>
+            <Row className="justify-content-between py-4">
+              <Col xs={6} md={6}>
                 <Link to="/">
                   <img src={Logo} alt="TronMart Logo" />
                 </Link>
               </Col>
-              <Col md={6}></Col>
+              <Col xs={6} md={6}>
+                <div className="buttons buttons-mobile d-flex gap-3">
+                  <Button
+                    className="position-relative"
+                    onClick={() => setToggleCart(!toggleCart)}
+                  >
+                    <FontAwesomeIcon icon={faCartShopping} />
+                    <Badge pill bg="dark" className="position-absolute">
+                      {products.length}
+                    </Badge>
+                  </Button>
+                  <div class="vr"></div>
+                  <Nav.Link className="text-white" href="#link">
+                    Log In
+                  </Nav.Link>
+                </div>
+              </Col>
             </Row>
           </Container>
         </Container>

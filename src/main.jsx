@@ -10,6 +10,7 @@ import SideBarLayout from "./components/Layout/SideBarLayout.jsx";
 import Categories from "./pages/Category/Categories.jsx";
 import { Provider } from "react-redux";
 import { store } from "./context/store.js";
+import CartPage from "./pages/Cart/CartPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <App />,
+      },
+      {
+        path: "/cart",
+        element: <CartPage />,
       },
       {
         path: "/products/:slug",
