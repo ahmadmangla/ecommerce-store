@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
@@ -16,6 +17,11 @@ const CartPage = () => {
     });
 
     return total;
+  };
+
+  const handleRemoveClick = (id, title) => {
+    dispatch(removeItem({ id: id }));
+    toast.success(`${title} is successfully removed from the cart`);
   };
   return (
     <Container className="my-4">
@@ -62,7 +68,7 @@ const CartPage = () => {
                           role="button"
                           size="lg"
                           icon={faXmarkCircle}
-                          onClick={() => dispatch(removeItem({ id: item.id }))}
+                          onClick={() => handleRemoveClick(item.id, item.title)}
                         />
                       </td>
                     </tr>

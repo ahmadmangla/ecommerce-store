@@ -1,20 +1,24 @@
 import { useParams } from "react-router-dom";
 import ProductList from "../../components/ProductList/ProductList";
-import { products } from "../../utils/dummydata";
+import { useGetProductByCategoryQuery } from "../../context/Products/productSlice";
 
 const Categories = () => {
   const { category } = useParams();
 
-  const FilteredProducts = products.filter(
-    (prod) => prod.category === category
-  );
+  if (category) {
+    const { data, error, isLoading } = useGetProductByCategoryQuery(category);
 
-  return (
-    <ProductList
-      title={FilteredProducts[0].categoryName}
-      categories={FilteredProducts}
-    />
-  );
+    return (
+      <>
+        {
+          <ProductList
+            filteredData={data}
+            title={data?.data[0]?.attributes?.categoryName}
+          />
+        }
+      </>
+    );
+  }
 };
 
 export default Categories;

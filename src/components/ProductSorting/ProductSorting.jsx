@@ -1,32 +1,41 @@
 import { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
-const ProductSorting = ({ allProducts, setProducts }) => {
+const ProductSorting = ({ sortData }) => {
   const [value, setValue] = useState("Default Sorting");
 
   function sortData(sort) {
     setValue(sort);
-    const newSortedProducts = [...allProducts];
-    if (sort === "Default Sorting") {
-      const sortedData = newSortedProducts.sort((a, b) => a.id - b.id);
-      setProducts(sortedData);
-    } else if (sort === "Sort by price: low to high") {
-      // Create a copy of the products array
-      const sortedData = newSortedProducts.sort((a, b) => a.price - b.price);
-      setProducts(sortedData);
-    } else if (sort === "Sort by price: high to low") {
-      const sortedData = newSortedProducts.sort((a, b) => b.price - a.price);
-      setProducts(sortedData);
-    } else if (sort === "Sort by Latest") {
-      const sortedData = newSortedProducts.sort((a, b) => a.id - b.id);
-      setProducts(sortedData);
+    // Create a copy of the products array
+
+    if (sortData) {
+      const newSortedProducts = [...sortData.data];
+
+      console.log(newSortedProducts);
+      if (sort === "Default Sorting") {
+        const sortedData = newSortedProducts.sort((a, b) => a.id - b.id);
+        sortData = sortedData;
+      } else if (sort === "Sort by price: low to high") {
+        const sortedData = newSortedProducts.sort(
+          (a, b) => a.attributes.price - b.attributes.price
+        );
+        sortData = sortedData;
+      } else if (sort === "Sort by price: high to low") {
+        const sortedData = newSortedProducts.sort(
+          (a, b) => b.attributes.price - a.attributes.price
+        );
+        sortData = sortedData;
+      } else if (sort === "Sort by Latest") {
+        const sortedData = newSortedProducts.sort((a, b) => a.id - b.id);
+        sortData = sortedData;
+      }
     }
   }
 
   return (
     <div className="sorting-wrapper d-flex justify-content-between align-items-center">
       <div className="results-total">
-        Showing Total {allProducts.length} Products
+        Showing Total {sortData?.data?.length} Products
       </div>
       <Dropdown>
         <Dropdown.Toggle id="dropdown-basic">{value}</Dropdown.Toggle>

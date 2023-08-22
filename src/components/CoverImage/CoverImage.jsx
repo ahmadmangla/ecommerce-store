@@ -1,4 +1,5 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styles from "./CoverImage.module.css";
 
 const CoverImage = () => {
@@ -14,9 +15,12 @@ const CoverImage = () => {
               Sit diam odio eget rhoncus volutpat est nibh velit posuere
               egestas.
             </p>
-            <Button className="text-primary bg-transparent fw-medium border-0 p-0">
+            <Link
+              to="/products"
+              className="text-primary bg-transparent fw-medium border-0 p-0"
+            >
               Shop Now
-            </Button>
+            </Link>
           </Col>
         </Row>
       </Container>

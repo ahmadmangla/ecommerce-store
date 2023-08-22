@@ -101,7 +101,7 @@ export const products = [
   {
     id: 6,
     title: "MacBook Pro",
-    slug: "MacBook-Pro",
+    slug: "macbook-pro",
     description:
       "MacBook Pro 2021 with mini-LED display may launch between September, November",
     price: 1749,
@@ -208,7 +208,7 @@ export const products = [
   {
     id: 11,
     title: "perfume Oil",
-    slug: "perfume-Oil",
+    slug: "perfume-oil",
     description:
       "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
     price: 13,
@@ -423,7 +423,7 @@ export const products = [
   {
     id: 21,
     title: "Daal Masoor 500 grams",
-    slug: "Daal-Masoor-500-grams",
+    slug: "daal-masoor-500-grams",
     description: "Fine quality Branded Product Keep in a cool and dry place",
     price: 20,
     discountPercentage: 4.81,
@@ -526,7 +526,7 @@ export const products = [
   {
     id: 26,
     title: "Plant Hanger For Home",
-    slug: "Plant-Hanger-For-Home",
+    slug: "plant-hanger-for-home",
     description:
       "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
     price: 41,

@@ -11,6 +11,7 @@ import Categories from "./pages/Category/Categories.jsx";
 import { Provider } from "react-redux";
 import { store } from "./context/store.js";
 import CartPage from "./pages/Cart/CartPage.jsx";
+import { productsApi } from "./context/Products/productSlice.js";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,8 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
+store.dispatch(productsApi.endpoints.getAllProducts.initiate());
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

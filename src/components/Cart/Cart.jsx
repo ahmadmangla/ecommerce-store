@@ -1,11 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
+import { toast } from "react-hot-toast";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem } from "../../context/cartSlice";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-
 import "./cart.css";
 
 const Cart = ({ setToggleCart, toggleCart }) => {
@@ -19,6 +18,11 @@ const Cart = ({ setToggleCart, toggleCart }) => {
     });
 
     return total;
+  };
+
+  const handleRemoveClick = (id, title) => {
+    dispatch(removeItem({ id: id }));
+    toast.success(`${title} is successfully removed from the cart`);
   };
 
   return (
@@ -70,7 +74,7 @@ const Cart = ({ setToggleCart, toggleCart }) => {
                   role="button"
                   size="lg"
                   icon={faXmarkCircle}
-                  onClick={() => dispatch(removeItem({ id: item.id }))}
+                  onClick={() => handleRemoveClick(item.id, item.title)}
                 />
               </div>
             );

@@ -10,7 +10,6 @@ import { toast } from "react-hot-toast";
 
 const ProductCard = ({ id, title, description, thumbnail, price, slug }) => {
   const dispatch = useDispatch();
-
   const handleClick = ({
     id,
     title,
@@ -39,8 +38,8 @@ const ProductCard = ({ id, title, description, thumbnail, price, slug }) => {
       <Link to={`${slug}`}>
         <Card.Img
           className={` object-fit-contain ${styles.height}`}
-          variant="top "
-          src={thumbnail}
+          variant="top"
+          src={`http://localhost:1338${thumbnail}`}
         />
       </Link>
       <Card.Body>
