@@ -50,7 +50,7 @@ const Cart = ({ setToggleCart, toggleCart }) => {
                 <div className="image">
                   <img
                     className="object-fit-contain"
-                    src={item.thumbnail}
+                    src={import.meta.env.VITE_SERVER_URL + item.thumbnail}
                     width={120}
                     height={120}
                     alt=""

@@ -12,6 +12,8 @@ import { Provider } from "react-redux";
 import { store } from "./context/store.js";
 import CartPage from "./pages/Cart/CartPage.jsx";
 import { productsApi } from "./context/Products/productSlice.js";
+import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
+import cartSlice from "./context/cartSlice.js";
 
 const router = createBrowserRouter([
   {

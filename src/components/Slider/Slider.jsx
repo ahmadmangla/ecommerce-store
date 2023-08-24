@@ -7,13 +7,18 @@ import "./Slider.css";
 
 function Slider(props) {
   const { images } = props;
+  console.log(images);
   return (
     <>
       <Carousel className={`mb-4 customSlider`}>
         {images.map((item) => {
           return (
-            <Carousel.Item key={item}>
-              <img className="d-block w-100" src={item} alt="First slide" />
+            <Carousel.Item key={item.id}>
+              <img
+                className="d-block w-100"
+                src={import.meta.env.VITE_SERVER_URL + item.attributes.url}
+                alt="First slide"
+              />
             </Carousel.Item>
           );
         })}
@@ -22,11 +27,11 @@ function Slider(props) {
         {images.map((item) => {
           return (
             <Image
-              key={item}
+              key={item.id}
               height={70}
               width={70}
               className="object-fit-cover"
-              src={item}
+              src={import.meta.env.VITE_SERVER_URL + item.attributes.url}
               rounded
             />
           );

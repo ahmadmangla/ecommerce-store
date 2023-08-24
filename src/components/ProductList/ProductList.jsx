@@ -1,47 +1,40 @@
 import { Col, Container, Row, Dropdown } from "react-bootstrap";
 import ProductCard from "../ProductCard/ProductCard";
 import PageTitle from "../PageTitle/PageTitle";
-import {
-  productsApi,
-  useGetAllProductsQuery,
-} from "../../context/Products/productSlice";
+import { useGetAllProductsQuery } from "../../context/Products/productSlice";
 import { useState } from "react";
+import ProductCardSkeleton from "../Skeleton/ProductCardSkeleton";
 
 const ProductList = ({ filteredData, title }) => {
   const [value, setValue] = useState("Default Sorting");
-  const [sort, setSort] = useState("desc");
-  let { data, isLoading, isSuccess } =
-    productsApi.endpoints.getAllProducts.useQuery(sort);
-  let content = [];
+  const [sortBy, setSortBy] = useState("price:desc");
+  let { data: product, isLoading } = useGetAllProductsQuery({ sortBy });
 
-  if (isLoading) {
-    <h2>Loading...</h2>;
-  }
+  // if (isLoading) {
+  //   return <h2>Loading...</h2>;
+  // }
 
-  if (isSuccess) {
-    content = data;
-    if (filteredData) {
-      content = filteredData;
-    }
+  if (filteredData) {
+    product = filteredData;
   }
 
   const handleClick = (e) => {
     setValue(e.target.innerHTML);
     if (value === "Sort by price: high to low") {
-      setSort("price:desc");
+      setSortBy("price:desc");
     } else if (value === "Default Sorting") {
-      setSort("");
+      setSortBy("desc");
     } else if (value === "Sort by price: low to high") {
-      setSort("price");
+      setSortBy("price");
     }
   };
 
   return (
     <Container className="py-5">
-      <PageTitle title={title} />
+      {<PageTitle title={title} />}
       <div className="sorting-wrapper d-flex justify-content-between align-items-center">
         <div className="results-total">
-          Showing Total {content?.data?.length} Products
+          Showing Total {product?.data?.length} Products
         </div>
         <Dropdown>
           <Dropdown.Toggle id="dropdown-basic">{value}</Dropdown.Toggle>
@@ -64,23 +57,30 @@ const ProductList = ({ filteredData, title }) => {
         </Dropdown>
       </div>
       <Row className="my-4 justify-content-center">
-        {isLoading && <h1>Loading....</h1>}
-        {content.data &&
-          content.data.map((item) => {
-            return (
-              <Col key={item.id} md={6} lg={4}>
-                <ProductCard
-                  id={item.id}
-                  title={item.attributes.title}
-                  description={item.attributes.description}
-                  price={item.attributes.price}
-                  slug={item.attributes.slug}
-                  images={item.attributes.images}
-                  thumbnail={item.attributes?.thumbnail?.data?.attributes?.url}
-                />
-              </Col>
-            );
-          })}
+        {isLoading
+          ? Array.from({ length: 6 }).map(() => {
+              return (
+                <Col md={6} lg={4}>
+                  <ProductCardSkeleton />
+                </Col>
+              );
+            })
+          : product?.data &&
+            product?.data.map((item) => {
+              return (
+                <Col key={item.id} md={6} lg={4}>
+                  <ProductCard
+                    id={item.id}
+                    title={item.attributes.title}
+                    description={item.attributes.description}
+                    price={item.attributes.price}
+                    slug={item.attributes.slug}
+                    images={item.attributes.images}
+                    thumbnail={item.attributes.thumbnail.data.attributes.url}
+                  />
+                </Col>
+              );
+            })}
       </Row>
     </Container>
   );

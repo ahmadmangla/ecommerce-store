@@ -36,7 +36,7 @@ const Header = () => {
                   >
                     <FontAwesomeIcon icon={faCartShopping} />
                     <Badge pill bg="dark" className="position-absolute">
-                      {products.length}
+                      {/* {products?.length} */}
                     </Badge>
                   </Button>
                   <div class="vr"></div>
