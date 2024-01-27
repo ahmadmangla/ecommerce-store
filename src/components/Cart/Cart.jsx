@@ -26,20 +26,11 @@ const Cart = ({ setToggleCart, toggleCart }) => {
   };
 
   return (
-    <div
-      className={`${
-        toggleCart ? `cart position-relative active` : `cart position-relative`
-      }`}
-    >
+    <div className={`${toggleCart ? `cart position-relative active` : `cart position-relative`}`}>
       <aside className="vh-100 w-25 d-block bg-white border-left position-fixed z-2 right-0 h-100vh p-3 end-0 top-0 overflow-y-auto">
         <div className="title d-flex justify-content-between align-items-center">
           <h2 className="mb-0 text-primary">Cart</h2>
-          <FontAwesomeIcon
-            role="button"
-            size="2xl"
-            icon={faXmarkCircle}
-            onClick={() => setToggleCart(!toggleCart)}
-          />
+          <FontAwesomeIcon role="button" size="2xl" icon={faXmarkCircle} onClick={() => setToggleCart(!toggleCart)} />
         </div>
         <hr />
 
@@ -48,13 +39,7 @@ const Cart = ({ setToggleCart, toggleCart }) => {
             return (
               <div className="d-flex gap-3 mb-4 align-items-center position-relative right-10">
                 <div className="image">
-                  <img
-                    className="object-fit-contain"
-                    src={import.meta.env.VITE_SERVER_URL + item.thumbnail}
-                    width={120}
-                    height={120}
-                    alt=""
-                  />
+                  <img className="object-fit-contain" src={item.thumbnail} width={120} height={120} alt="" />
                 </div>
                 <div className="product-detail ">
                   <div className="title pe-4">
@@ -69,13 +54,7 @@ const Cart = ({ setToggleCart, toggleCart }) => {
                     <span className="fw-bold">Price: </span>${item.price}
                   </p>
                 </div>
-                <FontAwesomeIcon
-                  className="position-absolute end-0 top-0"
-                  role="button"
-                  size="lg"
-                  icon={faXmarkCircle}
-                  onClick={() => handleRemoveClick(item.id, item.title)}
-                />
+                <FontAwesomeIcon className="position-absolute end-0 top-0" role="button" size="lg" icon={faXmarkCircle} onClick={() => handleRemoveClick(item.id, item.title)} />
               </div>
             );
           })
@@ -102,10 +81,7 @@ const Cart = ({ setToggleCart, toggleCart }) => {
           </div>
         </div>
       </aside>
-      <div
-        className="backdrop opacity-75 position-fixed inset-0 bg-black w-100 h-100 z-1 top-0"
-        onClick={() => setToggleCart(!toggleCart)}
-      ></div>
+      <div className="backdrop opacity-75 position-fixed inset-0 bg-black w-100 h-100 z-1 top-0" onClick={() => setToggleCart(!toggleCart)}></div>
     </div>
   );
 };

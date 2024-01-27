@@ -6,18 +6,9 @@ const Categories = () => {
   const { category } = useParams();
 
   if (category) {
-    const { data, error, isLoading } = useGetProductByCategoryQuery(category);
+    let { data, error, isLoading } = useGetProductByCategoryQuery(category);
 
-    return (
-      <>
-        {
-          <ProductList
-            filteredData={data}
-            title={data?.data[0]?.attributes?.categoryName}
-          />
-        }
-      </>
-    );
+    return <ProductList filteredData={!isLoading ? data : null} title={!isLoading ? data.products.category : null} />;
   }
 };
 

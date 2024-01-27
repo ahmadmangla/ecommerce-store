@@ -45,31 +45,16 @@ const CartPage = () => {
                   return (
                     <tr className="position-relative border" key={item.id}>
                       <td className="align-middle">
-                        <img
-                          className="object-fit-contain"
-                          src={import.meta.env.VITE_SERVER_URL + item.thumbnail}
-                          width={120}
-                          height={120}
-                          alt=""
-                        />
+                        <img className="object-fit-contain" src={item.thumbnail} width={120} height={120} alt="" />
                       </td>
                       <td className="align-middle">
-                        <Link to={`/products/${item.slug}`}>{item.title}</Link>
+                        <Link to={`/products/${item.id}`}>{item.title}</Link>
                       </td>
                       <td className="align-middle">${item.price.toFixed(2)}</td>
                       <td className="align-middle">{item.quantity}</td>
+                      <td className="align-middle">${(item.quantity * item.price).toFixed(2)}</td>
                       <td className="align-middle">
-                        ${(item.quantity * item.price).toFixed(2)}
-                      </td>
-                      <td className="align-middle">
-                        <FontAwesomeIcon
-                          style={{ marginRight: "5px" }}
-                          className=""
-                          role="button"
-                          size="lg"
-                          icon={faXmarkCircle}
-                          onClick={() => handleRemoveClick(item.id, item.title)}
-                        />
+                        <FontAwesomeIcon style={{ marginRight: "5px" }} className="" role="button" size="lg" icon={faXmarkCircle} onClick={() => handleRemoveClick(item.id, item.title)} />
                       </td>
                     </tr>
                   );

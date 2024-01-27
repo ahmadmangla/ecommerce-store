@@ -10,15 +10,7 @@ import { toast } from "react-hot-toast";
 
 const ProductCard = ({ id, title, description, thumbnail, price, slug }) => {
   const dispatch = useDispatch();
-  const handleClick = ({
-    id,
-    title,
-    description,
-    thumbnail,
-    quantity,
-    price,
-    slug,
-  }) => {
+  const handleClick = ({ id, title, description, thumbnail, quantity, price, slug }) => {
     dispatch(
       addToCart({
         id,
@@ -36,11 +28,7 @@ const ProductCard = ({ id, title, description, thumbnail, price, slug }) => {
   return (
     <Card className="p-0 mb-4">
       <Link to={`${slug}`}>
-        <Card.Img
-          className={` object-fit-contain ${styles.height}`}
-          variant="top"
-          src={`http://localhost:1338${thumbnail}`}
-        />
+        <Card.Img className={` object-fit-contain ${styles.height}`} variant="top" src={`${thumbnail}`} />
       </Link>
       <Card.Body>
         <div className="rating mb-2">

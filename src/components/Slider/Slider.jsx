@@ -1,8 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
-
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
-
 import "./Slider.css";
 
 function Slider(props) {
@@ -14,27 +12,14 @@ function Slider(props) {
         {images.map((item) => {
           return (
             <Carousel.Item key={item.id}>
-              <img
-                className="d-block w-100"
-                src={import.meta.env.VITE_SERVER_URL + item.attributes.url}
-                alt="First slide"
-              />
+              <img className="d-block w-100" src={item} alt="First slide" />
             </Carousel.Item>
           );
         })}
       </Carousel>
       <div className="slider-thumbs d-flex gap-4">
         {images.map((item) => {
-          return (
-            <Image
-              key={item.id}
-              height={70}
-              width={70}
-              className="object-fit-cover"
-              src={import.meta.env.VITE_SERVER_URL + item.attributes.url}
-              rounded
-            />
-          );
+          return <Image key={item.id} height={70} width={70} className="object-fit-cover" src={item} rounded />;
         })}
       </div>
     </>

@@ -7,21 +7,13 @@ import SelectQuantity from "../../components/SelectQuantity/SelectQuantity";
 import ProductDetailSkeleton from "../../components/Skeleton/ProductDetailSkeleton";
 import Slider from "../../components/Slider/Slider";
 import { addToCart } from "../../context/cartSlice";
-import {
-  productsApi,
-  useGetProductBySlugQuery,
-} from "../../context/Products/productSlice";
-import { products } from "../../utils/dummydata";
+import { useGetProductBySlugQuery } from "../../context/Products/productSlice";
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
   const { slug } = useParams();
   const [counter, setCounter] = useState(1);
-  const {
-    data: product,
-    isLoading = false,
-    isError,
-  } = useGetProductBySlugQuery(slug);
+  const { data, isLoading, isError } = useGetProductBySlugQuery(slug);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -31,15 +23,7 @@ const ProductDetail = () => {
     return <div>Sorry there was an error!</div>;
   }
 
-  const handleClick = (
-    id,
-    title,
-    description,
-    thumbnail,
-    quantity,
-    price,
-    slug
-  ) => {
+  const handleClick = (id, title, description, thumbnail, quantity, price, slug) => {
     dispatch(
       addToCart({
         id,
@@ -62,43 +46,19 @@ const ProductDetail = () => {
         <Container className="py-5">
           <Row>
             <Col md={6}>
-              <Slider
-                images={
-                  product?.data && product?.data[0].attributes.images.data
-                }
-              />
+              <Slider images={data && data.images} />
             </Col>
 
             <Col md={6}>
               <div className="product-info border-bottom pb-4">
-                <h1 className="fw-bold">
-                  {product?.data && product?.data[0].attributes.title}
-                </h1>
-                <p className="fw-bold fs-3">
-                  {" "}
-                  ${product?.data && product?.data[0].attributes.price}.00
-                </p>
-                <p>
-                  {product?.data && product?.data[0].attributes.description}.
-                </p>
+                <h1 className="fw-bold">{data && data.title}</h1>
+                <p className="fw-bold fs-3"> ${data && data.price}.00</p>
+                <p>{data && data.description}.</p>
                 <div className="add-to-cart d-flex gap-4">
                   <SelectQuantity counter={counter} setCounter={setCounter} />
                   <Button
                     variant="primary rounded-0 inline-block fw-bold px-4"
-                    onClick={() =>
-                      handleClick(
-                        product?.data && product?.data[0].id,
-                        product?.data && product?.data[0].attributes.title,
-                        product?.data &&
-                          product?.data[0].attributes.description,
-                        product?.data &&
-                          product?.data[0].attributes.thumbnail.data.attributes
-                            .url,
-                        counter,
-                        product?.data && product?.data[0].attributes.price,
-                        product?.data && product?.data[0].attributes.slug
-                      )
-                    }
+                    onClick={() => handleClick(data && data.id, data && data.title, data && data.description, data && data.url, counter, data && data.price, data && data.slug)}
                   >
                     Add to Cart
                   </Button>
@@ -108,19 +68,15 @@ const ProductDetail = () => {
                 <p className="py-3">
                   Category:{" "}
                   <span>
-                    <Link
-                      to={`/product-categories/${
-                        product?.data && product?.data[0].attributes.category
-                      }`}
-                    >
-                      {product?.data &&
-                        product?.data[0].attributes.categoryName}
-                    </Link>
+                    <Link to={`/product-categories/${data && data.category}`}>{data && data.category}</Link>
                   </span>
                 </p>
               </div>
             </Col>
           </Row>
+          <script type="text/javascript" src="http://localhost:1338/plugins/strapi-stripe/static/stripe.js">
+            {" "}
+          </script>
         </Container>
       )}
       );
