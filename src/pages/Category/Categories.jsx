@@ -8,7 +8,7 @@ const Categories = () => {
   if (category) {
     let { data, error, isLoading } = useGetProductByCategoryQuery(category);
 
-    return <ProductList filteredData={!isLoading ? data : null} title={!isLoading ? data.products.category : null} />;
+    return <ProductList filteredData={!isLoading ? data : null} title={!isLoading ? data.category : null} />;
   }
 };
 

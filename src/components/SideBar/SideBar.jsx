@@ -13,11 +13,7 @@ const SideBar = () => {
     e.preventDefault();
     const urlSearchParams = new URLSearchParams(window.location.search);
     urlSearchParams.set("maxPrice", priceRange);
-    window.history.pushState(
-      {},
-      "",
-      `${window.location.pathname}?${urlSearchParams}`
-    );
+    window.history.pushState({}, "", `${window.location.pathname}?${urlSearchParams}`);
   };
 
   return (
@@ -41,9 +37,7 @@ const SideBar = () => {
             <Link to="/product-categories/groceries">Groceries</Link>
           </Nav.Item>
           <Nav.Item className="mb-3 px-2">
-            <Link to="/product-categories/home-decoration">
-              Home Decoration
-            </Link>
+            <Link to="/product-categories/home-decoration">Home Decoration</Link>
           </Nav.Item>
         </Nav>
       </div>
@@ -52,20 +46,9 @@ const SideBar = () => {
 
         <Form method="get">
           <Form.Label>Price</Form.Label>
-          <Form.Range
-            value={priceRange}
-            onChange={(e) => handlePriceChange(e.target.value)}
-            min={0}
-            max={2000}
-            step={10}
-          />
+          <Form.Range value={priceRange} onChange={(e) => handlePriceChange(e.target.value)} min={0} max={2000} step={10} />
           <div>${priceRange}</div>
-          <Button
-            variant="primary"
-            className="mt-4"
-            type="submit"
-            onClick={handleSubmit}
-          >
+          <Button variant="primary" className="mt-4" type="submit" onClick={handleSubmit}>
             Apply
           </Button>
         </Form>

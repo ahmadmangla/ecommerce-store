@@ -16,8 +16,7 @@ export const store = configureStore({
     [productsApi.reducerPath]: productsApi.reducer,
     cart: persistedCartReducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(productsApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsApi.middleware),
 });
 
 export const persistor = persistStore(store);

@@ -27,7 +27,7 @@ const ProductCard = ({ id, title, description, thumbnail, price, slug }) => {
 
   return (
     <Card className="p-0 mb-4">
-      <Link to={`${slug}`}>
+      <Link to={`${id}`}>
         <Card.Img className={` object-fit-contain ${styles.height}`} variant="top" src={`${thumbnail}`} />
       </Link>
       <Card.Body>

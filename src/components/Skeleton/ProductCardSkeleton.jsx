@@ -6,22 +6,16 @@ import Card from "react-bootstrap/Card";
 const ProductCardSkeleton = () => {
   return (
     <Card className="p-0 mb-4">
-      <a>
-        <Card.Img
-          className={` object-fit-contain}`}
-          variant="top"
-          // src={`http://localhost:1338${thumbnail}`}
-        />
-      </a>
+      <div>
+        <Skeleton width={"100%"} height={"120px"} />
+      </div>
       <Card.Body>
         <div className="rating mb-2">
           <span>
             <Skeleton width={100} />
           </span>
         </div>
-        <Card.Title className="fs-6 fw-bold">
-          {<Skeleton width={60} />}
-        </Card.Title>
+        <Card.Title className="fs-6 fw-bold">{<Skeleton width={60} />}</Card.Title>
         <Card.Text className="mb-1"> {<Skeleton count={4} />}</Card.Text>
         <div className="price fw-bold mb-2">{<Skeleton />}</div>
         <div className="price fw-bold mb-2">{<Skeleton width={100} />}</div>

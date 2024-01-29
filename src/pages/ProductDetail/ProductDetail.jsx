@@ -58,7 +58,7 @@ const ProductDetail = () => {
                   <SelectQuantity counter={counter} setCounter={setCounter} />
                   <Button
                     variant="primary rounded-0 inline-block fw-bold px-4"
-                    onClick={() => handleClick(data && data.id, data && data.title, data && data.description, data && data.url, counter, data && data.price, data && data.slug)}
+                    onClick={() => handleClick(data && data.id, data && data.title, data && data.description, data && data.thumbnail, counter, data && data.price, data && data.slug)}
                   >
                     Add to Cart
                   </Button>
@@ -74,9 +74,6 @@ const ProductDetail = () => {
               </div>
             </Col>
           </Row>
-          <script type="text/javascript" src="http://localhost:1338/plugins/strapi-stripe/static/stripe.js">
-            {" "}
-          </script>
         </Container>
       )}
       );
